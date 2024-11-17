@@ -1,56 +1,54 @@
-#include <iostream>
-#include <iomanip>
+/* Vaihe 1: Car-luokka
+Luo C++-ohjelma, jossa määritellään luokka nimeltä Car. Tällä luokalla tulisi olla seuraavat jäsenmuuttujat ja metodit:
 
-using namespace std;
+Jäsenmuuttujat:
+brand: merkkijono, joka sisältää auton merkin.
+model: merkkijono, joka sisältää auton mallin.
+yearModel: kokonaisluku, joka sisältää auton valmistusvuoden.
+Metodit:
+printData(): tulostaa auton merkin, mallin ja valmistusvuoden.
+setBrand(string): asettaa auton merkin.
+setModel(string): asettaa auton mallin.
+setYearModel(int): asettaa auton valmistusvuoden.
+Pääohjelmassa:
 
-//Funktio summan laskemiseen ja tulostamiseen
-void calcSum(int a, int b) {
-    cout << "Summa: " << a + b << endl;
-}
+Luo Car-olio pinomuistiin ja aseta sille merkki, malli ja vuosi.
+Tulosta auton tiedot käyttämällä printData()-metodia.
+Vaihe 2: Rectangle-luokka
+Tee C++-ohjelma, jossa määritellään luokka nimeltä Rectangle. Tällä luokalla tulisi olla seuraavat jäsenmuuttujat ja metodit:
 
-//Funktio osamäärän laskemiseen ja tulostamiseen
-void calcDiv(int a, int b) {
-    if (b == 0) {
-        cout << "Virhe: Jakaja on nolla!" << endl;
-    } else {
-        cout << "Osamäärä: " << fixed << setprecision(2) << (float)a / b << endl;
-    }
-}
+Jäsenmuuttujat:
+width: reaaliluku(double), joka määrittää suorakulmion leveyden.
+height: reaaliluku(double), joka määrittää suorakulmion korkeuden.
+Metodit:
+getArea(): laskee ja palauttaa suorakulmion pinta-alan kaavalla width * height.
+getCircum(): laskee ja palauttaa suorakulmion ympärysmitan kaavalla 2 * (width + height).
+setWidth(double): asettaa suorakulmion leveyden.
+setHeight(double): asettaa suorakulmion korkeuden.
+Pääohjelmassa:
 
-//Funktio summan laskemiseen ja palauttamiseen
-int retSum(int a, int b) {
-    return a + b;
-}
+Luo Rectangle-olio kekomuistiin ja aseta sen leveys ja korkeus.
+Tulosta suorakulmion pinta-ala ja ympärysmitta.
+Tuhoa olio.
+Vaihe 3: Student-luokka
+Luo C++-ohjelma, jossa määritellään luokka nimeltä Student. Tällä luokalla tulisi olla seuraavat jäsenmuuttujat ja metodit:
 
-//Funktio osamäärän laskemiseen ja palauttamiseen
-float retDiv(int a, int b) {
-    if (b == 0) {
-        cout << "Virhe: Jakaja on nolla!" << endl;
-        return 0;  // Palautetaan nolla, jos jakaja on nolla
-    } else {
-        return (float)a / b;
-    }
-}
+Käytä tässä harjoituksessa hyväksesi Qt-Creatorin Refactor toimintoa. Kun olet luonut jäsen muuttujat, klikkaa hiiren oikealla ja valitse "Add Getter and Setter ...".
 
-int main() {
-    int a, b;
+Jäsenmuuttujat:
+name: merkkijono, joka sisältää opiskelijan nimen.
+studentNumber: kokonaisluku, joka sisältää opiskelijanumeron.
+average: reaaliluku, joka sisältää opiskelijan keskiarvon.
+Metodit:
+Setterit:
+setName(string): asettaa opiskelijan nimen.
+setStudentNumber(int): asettaa opiskelijanumeron.
+setAverage(double): asettaa opiskelijan keskiarvon.
+Getterit:
+string getName(): palauttaa opiskelijan nimen.
+int getStudentNumber(): palauttaa opiskelijanumeron(merkkimuotoinen tunniste).
+double getAverage(): palauttaa opiskelijan keskiarvon.
+Pääohjelmassa:
 
-    // Kysytään käyttäjältä kaksi kokonaislukua
-    cout << "Syötä ensimmäinen kokonaisluku (a): ";
-    cin >> a;
-    cout << "Syötä toinen kokonaisluku (b): ";
-    cin >> b;
-
-    //Kutsutaan calcSum ja calcDiv funktiot
-    calcSum(a, b);
-    calcDiv(a, b);
-
-    //Kutsutaan retSum ja retDiv funktiot ja tulostetaan tulokset
-    cout << "RetSum: " << retSum(a, b) << endl;
-    float divisionResult = retDiv(a, b);
-    if (divisionResult != 0) {
-        cout << "RetDiv: " << fixed << setprecision(2) << divisionResult << endl;
-    }
-
-    return 0;
-}
+Luo Student-olio smart pointerilla ja aseta sille nimi, opiskelijanumero ja keskiarvo.
+Tulosta opiskelijan tiedot käyttämällä get-metodeja.*/
